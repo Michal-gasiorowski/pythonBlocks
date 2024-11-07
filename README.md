@@ -39,7 +39,10 @@ You can allways minify it back afterwords, using some online minifier, like [thi
 
 # Example programs
 
-#todo
+1. [Reflex game](/examples/reflexGame.py)
+2. [Heart beat](/examples/heartBeat.py)
+
+more to come ;)
 
 # Table of contents
 
