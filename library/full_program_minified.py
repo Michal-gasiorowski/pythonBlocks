@@ -11,13 +11,13 @@ timer=timerClass()
 class task_manager:
 	def __init__(self):self.tasks={};self.main_tasks={};self.add_main_task('system_init',dummyTask())
 	def add_main_task(self,task_id,coroutine):
-		if task_id in self.main_tasks:raise ValueError('that main task already exist')
+		if task_id in self.main_tasks:raise ValueError('that main task already exists')
 		task=asyncio.create_task(coroutine);self.main_tasks[task_id]=task
 	def add_task(self,task_id,coroutine):
-		if task_id in self.main_tasks:raise ValueError('cannot add task under id that already existis in main tasks')
+		if task_id in self.main_tasks:raise ValueError('cannot add task under id that already exists in main tasks')
 		if not task_id in self.tasks:task=asyncio.create_task(coroutine);self.tasks[task_id]=task
 	def add_or_replace_task(self,task_id,coroutine):
-		if task_id in self.main_tasks:raise ValueError('cannot add task under id that already existis in main tasks')
+		if task_id in self.main_tasks:raise ValueError('cannot add task under id that already exists in main tasks')
 		if task_id in self.tasks:self.remove_task(task_id)
 		task=asyncio.create_task(coroutine);self.tasks[task_id]=task
 	def cancel_task(self,task_id):

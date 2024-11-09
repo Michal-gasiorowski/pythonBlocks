@@ -150,7 +150,7 @@ my_new_variable = motor_A_speed
 motor.absolute_position(port.A)
 ```
 
-uwage:
+usage:
 
 ```python
 position = motor.absolute_position(port.A)
